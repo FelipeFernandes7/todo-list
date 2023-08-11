@@ -15,6 +15,9 @@
     "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.65.1",
+    "styled-components": "^6.0.7",
+    "typed-scss-modules": "^7.1.4",
     "typescript": "5.1.6"
   }
 }
