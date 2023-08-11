@@ -4,6 +4,20 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #303030;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ea4140;
+    border-radius: 15px;
+    border: 1px solid #ea4140;
+  }
+  overflow-x: hidden;
 }
 
 html {

@@ -2,7 +2,9 @@ import Head from "next/head";
 import heroImg from "../../public/assets/undraw_add_tasks_re_s5yj.svg";
 import styles from "@/styles/home.module.scss";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 export default function Home() {
+  const { data: session, status } = useSession();
   return (
     <div className={styles.container}>
       <Head>

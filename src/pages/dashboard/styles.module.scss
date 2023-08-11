@@ -1,0 +1,118 @@
+.container {
+  width: 100%;
+  .main {
+    .content {
+      background-color: #0f0f0f;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .contentForm {
+        width: 100%;
+        max-width: 64rem;
+        padding: 0 1.125rem;
+        padding-bottom: 1.75rem;
+        margin-top: 3.625rem;
+        .title {
+          color: #fff;
+          margin-bottom: 0.5rem;
+        }
+        form {
+          .checkboxArea {
+            margin: 0.875rem 0;
+            label {
+              margin-left: 0.5rem;
+              color: #fff;
+            }
+            .checkbox {
+              width: 1.125rem;
+              accent-color: #ea4140;
+              cursor: pointer;
+              transition: all linear 0.3s;
+              &:active {
+                transform: scale(1.28);
+              }
+            }
+          }
+          .button {
+            width: 100%;
+            border: none;
+            border-radius: 0.5rem;
+            color: #fff;
+            background-color: #ea4140;
+            padding: 0.8rem 0;
+            cursor: pointer;
+            transition: all linear 0.3s;
+            font-size: 1.125rem;
+            &:active {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+    }
+    .taskContainer {
+      margin: 2.125rem auto 0 auto;
+      padding: 0 18px;
+
+      display: flex;
+      flex-direction: column;
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 0.875rem;
+      }
+      a {
+        text-decoration: none;
+        color: #0f0f0f;
+      }
+      .task {
+        margin-bottom: 0.875rem;
+        line-height: 150%;
+        display: flex;
+        flex-direction: column;
+        border: 1.5px solid #ea4140;
+        border-radius: 0.5rem;
+        padding: 0.875rem;
+        align-items: flex-start;
+        .tagContainer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0.5rem;
+          .tag {
+            background-color: #ea4140;
+            padding: 2px 6px;
+            color: #fff;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+          }
+          .shareButton {
+            background: transparent;
+            border: none;
+            margin: 0 0.5rem;
+            cursor: pointer;
+          }
+        }
+        .taskContent {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          p {
+            white-space: pre-wrap;
+          }
+          .buttonTrash {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all linear 0.3s;
+            &:active {
+              transform: scale(1.28);
+            }
+          }
+        }
+      }
+    }
+  }
+}
