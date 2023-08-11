@@ -7,12 +7,6 @@ export default function Home() {
   const { data: session, status } = useSession();
   return (
     <div className={styles.container}>
-      {session?.user && (
-        <h1 className={styles.title}>
-          Olá <span>{session?.user?.name}</span>
-          !!
-        </h1>
-      )}
       <Head>
         <title>Tarefas | organize suas tarefas de forma fácil</title>
       </Head>
