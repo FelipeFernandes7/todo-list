@@ -24,14 +24,14 @@ export function Header() {
           <></>
         ) : session ? (
           <button onClick={() => signOut()} className={styles.loginButton}>
-            Olá {session.user?.name}
+            LogOut
           </button>
         ) : (
           <button
             onClick={() => signIn("google")}
             className={styles.loginButton}
           >
-            Entrar com Google
+            Login
           </button>
         )}
       </section>
