@@ -1,0 +1,66 @@
+.container {
+  max-width: 64rem;
+  margin: 2.5rem auto 0 auto;
+  padding: 0 1.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  .main {
+    width: 100%;
+    h1 {
+      margin-bottom: 0.875rem;
+    }
+    .task {
+      border: 0.094rem solid #ea4140;
+      padding: 0.875rem;
+      line-height: 150%;
+      border-radius: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        color: #fff;
+        white-space: pre-wrap;
+        width: 100%;
+      }
+    }
+  }
+  .commentsContainer {
+    width: 100%;
+    max-width: 64rem;
+    margin: 1.125rem 0;
+    h2 {
+      margin: 0.875rem 0;
+    }
+    form {
+      width: 100%;
+      .button {
+        width: 100%;
+        padding: 0.875rem 0;
+        border-radius: 0.5rem;
+        background: #ea4140;
+        color: #fff;
+        border: none;
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all linear 0.3s;
+        &:active {
+          transform: scale(0.95);
+        }
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.5;
+          transform: none;
+        }
+      }
+    }
+  }
+  .commentContainer {
+    width: 100%;
+    max-width: 64rem;
+    padding-right: 1.5rem;
+  }
+}

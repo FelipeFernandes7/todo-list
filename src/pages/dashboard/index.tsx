@@ -127,11 +127,6 @@ export default function Dashboard({ user }: DashboardProps) {
                 <label htmlFor="">Deixar tarefa pública</label>
               </div>
               <button
-                style={{
-                  opacity: input ? 1 : 0.5,
-                  transform: !input ? "none" : "",
-                  cursor: input ? "pointer" : "not-allowed",
-                }}
                 disabled={!input ? true : false}
                 className={styles.button}
                 type="submit"

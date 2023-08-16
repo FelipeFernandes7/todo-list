@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  h1 {
+    width: 100%;
+    white-space: pre-wrap;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: all linear 0.3s;
+    animation: color-change 3s infinite;
+
+    @keyframes color-change {
+      0%,
+      100% {
+        color: red;
+      }
+      50% {
+        color: white;
+      }
+    }
+  }
+}
