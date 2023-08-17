@@ -2,9 +2,16 @@ import Head from "next/head";
 import heroImg from "../../public/assets/undraw_add_tasks_re_s5yj.svg";
 import styles from "@/styles/home.module.scss";
 import Image from "next/image";
-import { useSession } from "next-auth/react";
-export default function Home() {
-  const { data: session, status } = useSession();
+import { GetStaticProps } from "next";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/services/firebaseConnection";
+
+interface HomeProps {
+  posts: number;
+  comments: number;
+}
+
+export default function Home({ posts, comments }: HomeProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,13 +33,29 @@ export default function Home() {
         </h1>
         <div className={styles.infoContent}>
           <section className={styles.box}>
-            <span>+ 12 posts</span>
+            <span> + {posts} Posts</span>
           </section>
           <section className={styles.box}>
-            <span>+ 90 comentários</span>
+            <span> + {comments} Comentários</span>
           </section>
         </div>
       </main>
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const commentRef = collection(db, "comments");
+  const commentSnapshot = await getDocs(commentRef);
+
+  const postRef = collection(db, "tasks");
+  const postSnapshot = await getDocs(postRef);
+
+  return {
+    props: {
+      posts: postSnapshot.size || 0,
+      comments: commentSnapshot.size || 0,
+    },
+    revalidate: 60,
+  };
+};
