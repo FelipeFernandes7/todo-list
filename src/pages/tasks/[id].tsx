@@ -109,7 +109,7 @@ export default function Tasks({ item, allComments }: TaskProps) {
       )}
 
       <section className={styles.commentContainer}>
-        <h2>Todos os Comentário</h2>
+        <h2>Todos os Comentários</h2>
         {comments.length === 0 && (
           <span>Nenhum Comentário foi encontrado...</span>
         )}
