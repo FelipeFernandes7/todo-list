@@ -4,14 +4,14 @@ import Link from "next/link";
 import styles from "./styles.module.scss";
 export function Header() {
   const { data: session, status } = useSession();
-  
+
   return (
     <header className={styles.header}>
       <section className={styles.content}>
         <nav className={styles.nav}>
           <Link href={"/"}>
             <h1 className={styles.logo}>
-              Web<span>Tasks</span>
+              Go<span>Task</span>
             </h1>
           </Link>
           {session?.user && (
