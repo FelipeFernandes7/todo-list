@@ -68,7 +68,7 @@ export default function Dashboard({ user }: DashboardProps) {
       const q = query(
         tasksRef,
         orderBy("created", "desc"),
-        where("user", "==", user?.email)
+        where("user", "==", user?.email),
       );
       onSnapshot(q, (snapshot) => {
         let lists = [] as TasksProps[];
@@ -89,7 +89,7 @@ export default function Dashboard({ user }: DashboardProps) {
 
   async function handleShare(id: string) {
     await navigator.clipboard.writeText(
-      `${process.env.NEXT_PUBLIC_URL}/tasks/${id}`
+      `${process.env.NEXT_PUBLIC_URL}/tasks/${id}`,
     );
     alert("Url copiada para área de transferência");
   }
